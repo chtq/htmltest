@@ -18,7 +18,7 @@ if i==1:
    j=p.expect([pexpect.TIMEOUT,'Password.*:'])
    if j==1:
       p.sendline('1qaz2wsx')
+      j=p.expect([pexpect.TIMEOUT,'master'])
    else:
       print j
-else:
-   print 'error2'
+
