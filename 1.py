@@ -6,7 +6,7 @@ import os
 os.system('git add .')
 os.system('git commit -am "%s"' %('test'))
 p=pexpect.spawn('git push')
-i=p.expext([pexpect.TIMEOUT, 'Username'])
+i=p.expect([pexpect.TIMEOUT, 'Username'])
 if i==0:
    print 'error'
    exit(0)
